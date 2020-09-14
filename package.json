@@ -1,0 +1,28 @@
+{
+  "name": "e-cell-web-dev",
+  "version": "1.0.0",
+  "description": "Recruitment task for web dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Aritra Sinha",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aritrasinha108/E-Cell-SIP-Backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aritrasinha108/E-Cell-SIP-Backend/issues"
+  },
+  "homepage": "https://github.com/aritrasinha108/E-Cell-SIP-Backend#readme"
+}
