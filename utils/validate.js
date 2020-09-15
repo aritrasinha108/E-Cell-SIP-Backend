@@ -1,20 +1,9 @@
 
 function validateForm(data)
 {
-let errors=[];
-if(!validateName(data.name))
-{
-    errors.push({msg:"Invalid name.."});
 
-}
-if(!validateEmail(data.email))
-{
-  errors.push({msg:"invalid email id"});  
-}
-if(errors!=[])
-{
-    return errors;
-}
+if(!validateEmail(data.email) || !validateName(data.name))
+return false;
 return true;
 
 
@@ -23,8 +12,10 @@ return true;
 function validateName(name){
     // Regex for the name
     var regex = /^[a-zA-Z" "]{2,30}$/;
+    console.log(regex.test(name));
     if (!regex.test(name)) {
        return false;
+
 
     }
   

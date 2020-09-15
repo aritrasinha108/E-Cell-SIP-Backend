@@ -1,9 +1,10 @@
 const express=require('express');
 const app=express();
+const flash=require('flash-express');
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 app.set("view engine","ejs");
-
+app.use(flash());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
