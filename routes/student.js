@@ -1,7 +1,15 @@
 const express=require('express');
 const router=express.Router();
-router.get('/',(req,res)=>{
-    res.send("This is the student page");
+const mongoose=require('mongoose');
+const {mongoURI1,mongoURI2}=require('../config');
+const Company=require('../models/company');
+
+
+
+
+router.get('/',async (req,res)=>{
+    let companies=await Company.find();
+    res.render('student',{companies:companies});
 })
 
 module.exports=router;

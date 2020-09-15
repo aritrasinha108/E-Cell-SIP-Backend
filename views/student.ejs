@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose your startup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1 class="text-center my-3 mx-3 font-weight-bold" > Choose your startup </h1>
+
+    <div class="conatiner text-center font-italic mt-10 mb-20 mx-20">
+        Below is the list of all the startups that are providing internship opportunities to the students of nitk. You
+        can find all their all details here....
+
+    <div class="container d-flex flex-column justify-content-between">
+
+
+        <% if(companies) {%>
+
+            <% companies.forEach(c=>{ %> 
+               <div class="card mt-5 mb-5 mx-10">
+                   <div class="card-body">
+                       <div class="card-title  font-italic font-weight-bold" style="font-size: 2.3rem;">
+                           <%= c.org %>
+                       </div>
+                       <div class="card-text mb-2 mt-2">
+                       Incentives: <%= c.incentive %>
+                       <br>
+                       Duration: <%= c.duration %>
+                       <br>
+                       <% if(c.website!="NA"){ %>
+                        Website: <a href="<%=c.website %>" target="_blank" rel="noopener noreferrer"> Click Here..</a>
+
+
+                        <% } %>
+                        <br>
+
+                        Profile Doc: <a href="/doc/<%=c.fileName %>" target="_blank" rel="noopener noreferrer"> Click Here...</a>
+                       
+
+                    </div>
+
+                    
+                   </div>
+    <a href="#" class="btn btn-success mt-2 mb-2 mr-2 ml-2 w-40">Apply Now</a>
+                
+
+               </div>
+           
+           
+           
+                <% }) %> 
+            
+    
+    
+           <% } %> 
+
+    </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
